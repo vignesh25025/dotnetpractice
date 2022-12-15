@@ -1,4 +1,9 @@
 ﻿using ConsoleApp1;
 
-StudentDbContext dbContext = new StudentDbContext();
-Console.WriteLine(dbContext.Student.ToList().Count);
+IStudentService studentService = new StudentService();
+Student student = studentService.AddStudent(new StudentFormData { 
+   Name = "Sample",
+   Department = 5,
+   DOB = DateTime.Now
+});
+Console.WriteLine(studentService.GetStudentList().Count);

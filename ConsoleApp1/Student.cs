@@ -7,4 +7,11 @@
         public DateTime DOB { get; set; }
         public int Department { get; set; }
     }
+
+    public class StudentFormData
+    {
+        public string Name { get; set; }
+        public DateTime DOB { get; set; }
+        public int Department { get; set; }
+    }
 }
