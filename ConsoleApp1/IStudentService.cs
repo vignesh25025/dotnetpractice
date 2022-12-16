@@ -2,7 +2,7 @@
 {
     public interface IStudentService
     {
-        List<Student> GetStudentList();
+        List<StudentListItem> GetStudentList();
         Student AddStudent(StudentFormData student); 
     }
 }
