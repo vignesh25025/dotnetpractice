@@ -5,4 +5,9 @@
         List<StudentListItem> GetStudentList();
         Student AddStudent(StudentFormData student); 
     }
+
+    public interface ILibraryService
+    {
+        int GetMaxBooks();
+    }
 }

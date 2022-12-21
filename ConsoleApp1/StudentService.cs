@@ -4,7 +4,12 @@ namespace ConsoleApp1
 {
     public class StudentService : IStudentService
     {
-        StudentDbContext dbContext = new StudentDbContext();
+        StudentDbContext dbContext;
+
+        public StudentService(StudentDbContext dbContext)
+        {
+            this.dbContext = dbContext;
+        }
 
         public List<StudentListItem> GetStudentList()
         {
