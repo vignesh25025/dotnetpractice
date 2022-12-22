@@ -8,6 +8,7 @@
 
     public interface ILibraryService
     {
+        public int count { get; set; }
         int GetMaxBooks();
     }
 }

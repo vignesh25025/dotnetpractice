@@ -2,9 +2,14 @@
 {
     public class LibraryManagementService
     {
-
-        public int GetMaxBooks(ILibraryService libraryService)
+        ILibraryService libraryService;
+        public LibraryManagementService(ILibraryService libraryService)
         {
+            this.libraryService = libraryService;
+        }
+        public int GetMaxBooks()
+        {
+            libraryService.count = 10;
             return libraryService.GetMaxBooks();
         }
     }

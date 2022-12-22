@@ -8,6 +8,9 @@ namespace ConsoleApp1
 {
     public class StudentLibraryService : ILibraryService
     {
+        private int booksCount;
+        public int count { get => booksCount; set => booksCount = value; }
+
         public int GetMaxBooks()
         {
             return 10;
