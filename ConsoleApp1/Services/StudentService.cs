@@ -5,17 +5,14 @@ namespace ConsoleApp1
     public class StudentService : IStudentService
     {
         StudentDbContext dbContext;
-        ILibraryService libraryService;
 
-        public StudentService(StudentDbContext dbContext, ILibraryService libraryService)
+        public StudentService(StudentDbContext dbContext)
         {
-            this.libraryService = libraryService;
             this.dbContext = dbContext;
         }
 
         public List<StudentListItem> GetStudentList()
         {
-            Console.WriteLine(libraryService.count);
             var studentList = dbContext.Student.Include(x => x.DepartmentDetails).ToList();
             List<StudentListItem> response = new List<StudentListItem>();
             foreach (var student in studentList)
